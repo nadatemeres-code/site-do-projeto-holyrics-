@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Holyrics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    main {
+      max-width: 1000px;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      font-size: 1.2rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    section.videos {
+      margin-top: 50px;
+      display: grid;
+      gap: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 15px;
+      border: none;
+    }
+
+    .author {
+      margin-top: 60px;
+    }
+
+    .author img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Projeto Holyrics</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="menu">
+      <a href="#inicio">Início</a>
+      <a href="#videos">Tutoriais</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <h1>Bem-vindo ao Projeto Holyrics</h1>
+    <p class="highlight">Dominando o Holyrics de forma simples e prática.</p>
+
+    <section class="videos" id="videos">
+      <h2>Tutoriais em Destaque</h2>
+      <iframe src="https://www.youtube.com/embed/Enkqp2QHd3E" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/3uYIYmWBgF8" allowfullscreen></iframe>
+    </section>
+
+    <section class="author" id="sobre">
+      <h2>Sobre o Autor</h2>
+      <img src="Imagem do WhatsApp de 2025-08-27 à(s) 12.10.02_a28fbfa3.jpg" alt="Foto do autor" />
+      <p>Canal oficial Projeto Holyrics — ensinando pessoas a dominar o Holyrics com praticidade e dedicação.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Projeto Holyrics — Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('active'));
+  </script>
+</body>
+</html>
