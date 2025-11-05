@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Banner com foto de perfil -->
+    <!-- Banner com efeito de paralaxe usando a foto do canal -->
     <header class="banner">
         <div class="banner-content">
-            <img src="foto-perfil.jpg" alt="Foto de perfil do Projeto HoLyrics" class="perfil">
-            <h1>Projeto HoLyrics</h1>
-            <p>Aprenda a criar letras e projeções com estilo único</p>
-            <a href="https://www.youtube.com/@projetoholyrics7226" target="_blank" class="btn">Visite nosso canal</a>
+            <!-- Aqui usamos a foto que você enviou -->
+            <img src="foto-canal-enviada.jpg" alt="Foto de perfil do Projeto HoLyrics" class="perfil animate-hover">
+            <h1 class="fade-in">Projeto HoLyrics</h1>
+            <p class="fade-in delay">Aprenda a criar letras e projeções com estilo único</p>
+            <a href="https://www.youtube.com/@projetoholyrics7226" target="_blank" class="btn fade-in delay-2">Visite nosso canal</a>
         </div>
     </header>
 
     <main>
         <!-- Sobre o Canal -->
-        <section class="card">
+        <section class="card fade-up">
             <h2>O que é o Projeto HoLyrics?</h2>
             <p>
                 O Projeto HoLyrics é um canal dedicado a ensinar você a usar o programa HoLyrics, criando letras, temas animados e projeções para cultos ou eventos. 
@@ -31,16 +32,16 @@
         </section>
 
         <!-- Origem do Canal -->
-        <section class="card">
+        <section class="card fade-up delay-1">
             <h2>Como o canal surgiu?</h2>
             <p>
                 O canal surgiu da paixão por música, letras e edição de projeções, com a proposta de ajudar outros a criarem seus conteúdos visuais usando o HoLyrics. Cada vídeo é feito com cuidado para inspirar e ensinar.
             </p>
-            <img src="sua-foto.jpg" alt="Foto do Criador do Canal" class="foto">
+            <img src="sua-foto.jpg" alt="Foto do Criador do Canal" class="foto animate-hover">
         </section>
 
         <!-- Vídeo em destaque -->
-        <section class="card">
+        <section class="card fade-up delay-2">
             <h2>Vídeo em destaque</h2>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/QZ-M3Ghjp8M" title="Tutorial HoLyrics – Programa (parte 1/4)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -54,5 +55,19 @@
         <p>&copy; 2025 Projeto HoLyrics. Todos os direitos reservados.</p>
         <p>Visite nosso canal: <a href="https://www.youtube.com/@projetoholyrics7226" target="_blank">Projeto HoLyrics</a></p>
     </footer>
+
+    <!-- Script para animação ao rolar -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
