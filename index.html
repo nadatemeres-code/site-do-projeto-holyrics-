@@ -1397,7 +1397,7 @@ Espero muito que curtam o canal e que vocês se sintam à vontade pra fazer perg
       menu.classList.toggle("hidden");
     });
   </script>
-<!-- Banner de Cookies - Tema Laranja -->
+<!-- Banner de Cookies - Completo com ACEITAR e RECUSAR -->
 <style>
   #cookie-box {
     position: fixed;
@@ -1406,7 +1406,7 @@ Espero muito que curtam o canal e que vocês se sintam à vontade pra fazer perg
     transform: translateX(-50%) translateY(200px);
     width: 90%;
     max-width: 450px;
-    background: rgba(255, 102, 0, 0.95); /* laranja principal */
+    background: rgba(255, 102, 0, 0.95); /* laranja */
     color: #fff;
     padding: 20px;
     border-radius: 14px;
@@ -1423,11 +1423,15 @@ Espero muito que curtam o canal e que vocês se sintam à vontade pra fazer perg
     transform: translateX(-50%) translateY(0);
   }
 
-  #cookie-box button {
+  #cookie-buttons {
     margin-top: 12px;
-    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+
+  #cookie-buttons button {
+    flex: 1;
     padding: 10px;
-    background: #ff8300; /* laranja claro */
     border: none;
     border-radius: 10px;
     color: #fff;
@@ -1437,30 +1441,57 @@ Espero muito que curtam o canal e que vocês se sintam à vontade pra fazer perg
     transition: background .3s;
   }
 
-  #cookie-box button:hover {
-    background: #e56f00; /* laranja escuro */
+  /* Botão aceitar */
+  #acceptCookies {
+    background: #ff8300; 
+  }
+  #acceptCookies:hover {
+    background: #e56f00;
+  }
+
+  /* Botão recusar */
+  #declineCookies {
+    background: #444;
+  }
+  #declineCookies:hover {
+    background: #222;
   }
 </style>
 
 <div id="cookie-box">
   Este site utiliza cookies para melhorar sua experiência. 
-  Ao continuar navegando, você concorda com nossa política de privacidade.
-  <button id="acceptCookies">Aceitar Cookies</button>
+  Você pode aceitar ou recusar o uso de cookies.
+  
+  <div id="cookie-buttons">
+    <button id="acceptCookies">Aceitar</button>
+    <button id="declineCookies">Não aceitar</button>
+  </div>
 </div>
 
 <script>
   window.addEventListener("load", function(){
-    if(!localStorage.getItem("cookieConsent")) {
+    if(!localStorage.getItem("cookieConsent")){
       const box = document.getElementById("cookie-box");
       setTimeout(() => box.classList.add("show"), 300);
     }
 
+    // Aceitar cookies
     document.getElementById("acceptCookies").onclick = function() {
-      localStorage.setItem("cookieConsent", "true");
+      localStorage.setItem("cookieConsent", "accepted");
       document.getElementById("cookie-box").classList.remove("show");
+      // Aqui você pode ativar scripts como Analytics, Ads, etc.
+    };
+
+    // Recusar cookies
+    document.getElementById("declineCookies").onclick = function() {
+      localStorage.setItem("cookieConsent", "declined");
+      document.getElementById("cookie-box").classList.remove("show");
+      // Bloqueia cookies e scripts externos (Google exige isso quando recusa)
+      console.log("Cookies recusados pelo usuário.");
     };
   });
 </script>
+
 
 </body>
 </html>
