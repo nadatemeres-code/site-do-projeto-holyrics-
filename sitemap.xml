@@ -1,56 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Página inicial -->
   <url>
     <loc>https://projetoholyrics.github.io/</loc>
     <priority>1.00</priority>
     <changefreq>daily</changefreq>
-  </url>
-
-  <!-- EXEMPLOS DE PÁGINAS INTERNAS -->
-  <!-- Substitua, adicione ou remova conforme seu site -->
-
-  <url>
-    <loc>https://projetoholyrics.github.io/sobre</loc>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://projetoholyrics.github.io/contato</loc>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://projetoholyrics.github.io/artigos</loc>
-    <priority>0.90</priority>
-    <changefreq>daily</changefreq>
-  </url>
-
-  <url>
-    <loc>https://projetoholyrics.github.io/backgrounds</loc>
-    <priority>0.90</priority>
-    <changefreq>daily</changefreq>
-  </url>
-
-  <url>
-    <loc>https://projetoholyrics.github.io/faq</loc>
-    <priority>0.70</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://projetoholyrics.github.io/recursos</loc>
-    <priority>0.90</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://projetoholyrics.github.io/videos</loc>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
   </url>
 
 </urlset>
