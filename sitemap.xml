@@ -3,8 +3,9 @@
 
   <url>
     <loc>https://projetoholyrics.github.io/</loc>
-    <priority>1.00</priority>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
 </urlset>
